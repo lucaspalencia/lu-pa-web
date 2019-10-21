@@ -31,7 +31,7 @@ h3 {
   font-size: 40px;
 }
 
-table .classified {
+table .classified, table .highlighted {
   background-color: #b3e5fc;
 }
 

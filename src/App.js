@@ -77,8 +77,8 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              {playoffMatches.map(match => (
-                <tr key={match.id}>
+              {playoffMatches.map((match, index) => (
+                <tr className={index >= 27 ? 'highlighted' : ''} key={match.id}>
                   <td>{match.team1}</td>
                   <td>{match.team1Score}</td>
                   <td>X</td>
