@@ -51,8 +51,8 @@ function App() {
                 </tr>
               </thead>
               <tbody>
-                {group.teams.map(team => (
-                  <tr key={team.id}>
+                {group.teams.map((team, index) => (
+                  <tr className={index === 0 || index === 1 ? 'classified' : ''} key={team.id}>
                     <td>{team.name}</td>
                     <td>{team.points}</td>
                     <td>{team.rounds}</td>

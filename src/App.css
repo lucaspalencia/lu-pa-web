@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #84ffff;
+  background-color: #e1f5fe;
 }
 
 code {
@@ -31,8 +31,12 @@ h3 {
   font-size: 40px;
 }
 
+table .classified {
+  background-color: #b3e5fc;
+}
+
 .winner {
-  color: #7c4dff;
+  color: #03a9f4;
 }
 
 .loader {
