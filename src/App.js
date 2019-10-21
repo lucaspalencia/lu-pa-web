@@ -8,6 +8,7 @@ function App() {
   const [event, setEvent] = useState({name: '', wonTeamName: ''});
   const [groups, setGroups] = useState([]);
   const [playoffMatches, setPlayoffMatches] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const loadEvent = async () => {
@@ -23,6 +24,7 @@ function App() {
     const loadPlayoffMatches = async () => {
       const playoffMatches = await getPlayoffMatches(EVENT_ID);
       setPlayoffMatches(playoffMatches);
+      setIsLoading(false);
     };
 
     loadEvent();
@@ -32,6 +34,9 @@ function App() {
 
   return (
     <div className="App container">
+      <div className={`${!isLoading ? 'd-none' : ''} loader`}>
+        <div className='spinner' />
+      </div>
       <h1 className="center">{ event.name }</h1>
       <div className="row">
         {groups.map(group => (

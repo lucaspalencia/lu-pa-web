@@ -34,3 +34,44 @@ h3 {
 .winner {
   color: #7c4dff;
 }
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color:rgba(255,255,255, 0.8);
+}
+
+.spinner {
+  display: block;
+  border: 10px solid #6d6e714c;
+  border-top: 10px solid #0288d1;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 1.3s linear infinite;
+}
+
+.d-none {
+  display: none !important;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media screen and ( max-width: 500px ){
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #6d6e714c;
+    border-top: 5px solid #0288d1;
+  }
+}
